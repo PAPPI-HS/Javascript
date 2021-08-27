@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+
+/* #171717
+#444444
+#DA0037
+#EDEDED */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right bottom ,#1a2a6c,#b21f1f,#fdbb2d );
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+}
+
+.js{
+    background-color: #171717;
+    height: 90vh;
+    width: 90vw;
+    border-radius: 2rem;
+    padding: 3rem;
+    overflow: auto;
+    margin-bottom: 6rem;
+}
+ 
+.section-7{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #444444;
+    
+    border-radius: 0.6rem;
+    width: 60%;
+}
+
+.section-8{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #444444;
+    
+    border-radius: 0.6rem;
+    width: 60%;
+
+}
+
+.main-h{
+    color:#DA0037;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+p{
+    font-size: 2rem;
+    color:ghostwhite;
+
+}
+
+code{
+    text-align: left;
+    margin: auto ;
+    padding: 0.3rem;
+    font-size: 2rem;
+    display: block;
+    background-color: white;
+    color:#54E346;
+    width: 65%;
+    border-radius: 0.5rem;
+}
+
+img{
+    height: 40rem;
+    margin-bottom: 3rem;
+}
+
+ul{ 
+    transform: translateX(50%);
+    width: 50%;
+    font-size: 2rem;
+    color: #DA0037;
+    background-color: #54E346;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+hr {
+    margin: 1rem;
+    background-image: linear-gradient(to right, #FC466B,#3F5EFB);
+    height: 0.3rem;
+
+}
+
+h3 {
+    color:yellow;
+    font-size: 2.7rem;
+    letter-spacing: 0.2rem;
+
+}

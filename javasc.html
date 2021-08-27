@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="javasc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>javascript-notes</title>
+</head>
+<body>
+    <div class='js'>
+        <div class="section-7">
+            <h1 class='main-h'>DOME AND EVENTS FUNDAMENTALS</h1>
+            <p>> Getting text inside an element with a class </p>
+            <br>
+            <code>
+                document.querySelector('.class').textcontent ;
+            </code>
+            <br>
+            <img src="pic/2021-08-24_16-43.png">
+            <hr>
+            <p>> Changing text content of an element with class</p>
+            <br>
+            <code>document.querySelector('.class').textcontent = 'new-text'</code>
+            <hr>
+            <p>Performing a specific function when a button with class check is clicked</p>
+            <br>
+            <code>
+                document.querySelector('.check').addEventListener<br>('click',function(){})
+            </code>
+            <hr>
+            <h3 class="main-h">Manipulate Css in Javascript</h3>
+            <p>> style properties with two word names are written in camel casing in js</p>
+            <br>
+            <p>> Value of the property always need to be string (between quots )</p>
+            <br>
+            <code>document.queryselector('name/class/id of element you want to change').style.
+                property = 'value'
+            </code>
+            <hr>
+            <p>> Making a function to display message to make code cleaner</p>
+            <br>
+            <code>const displayMsg = function(message){
+                display.queryselector('.message').textcontent = message ;
+            }
+            </code>
+            <hr>
+            <p>> To remove a class from an element having multiple classes e.g<br>
+            removing hidden class to make an element visible<br>
+            <ul>
+                <li>don't use dot with class to be removed</li>
+                <li>.remove is method of class .classList</li> 
+                <li>.add can be used to add a class in an element</li>
+            </ul>
+            </p>
+
+            <br>
+            <code>
+                document.queryselector('.class').classList<br>.remove('hidden')
+            </code>
+            <hr>
+            <p>If we use</p>
+            <code>document.addEventListner()</code>
+            <p>it will listen at all events in the document and perform what we specify in function</p>
+            <hr>
+            <p>> If you only want to sellect element based on it's ID you can use <br>
+            .getElementById instead of .querySelector</p>
+            <br>
+            <code>document.getElementById('score')<br> document.querySelector('#score')</code>
+            <hr>
+            <p>> Changing source of image in js :</p>
+            <br>
+            <code>
+                document.querySelector('.class').src = `my_image.png`
+            </code>
+            <hr>
+        </div>
+    </div>
+    <div class='js'>
+        <div class='section-8'>
+            <h1 class='main-h'>JS Behind The Scene</h1>
+            <br>
+            <br>
+            <h3>The JS Engine And Runtime</h3>
+            <br>
+            <img src='pic/1.png'>
+            <br>
+            <img src="pic/2.png">
+            <br>
+            <img src="pic/3.png">
+            <br>
+            <img src="pic/4.png">
+            <br>
+            <img src="pic/5.png" style="height: 15rem;">
+            <br>
+            <img src="pic/6.png">
+            <br>
+            <img src='pic/7.png'>
+            <br>
+            <img src="pic/8.png">
+            <hr>
+            <h3>Exicution contexts and The Call Stack</h3>
+            <br>
+            <img src="pic/9.png" >
+            <img src="pic/10.png">
+
+        </div>
+
+    </div>
+</body>
+</html>
