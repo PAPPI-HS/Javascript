@@ -40,7 +40,7 @@ body {
     background-color: #444444;
     
     border-radius: 0.6rem;
-    width: 60%;
+    width: 100%;
 }
 
 .section-8{
@@ -49,7 +49,7 @@ body {
     background-color: #444444;
     
     border-radius: 0.6rem;
-    width: 60%;
+    width: 100%;
 
 }
 
@@ -96,9 +96,11 @@ ul{
 }
 
 hr {
-    margin: 1rem;
-    background-image: linear-gradient(to right, #FC466B,#3F5EFB);
-    height: 0.3rem;
+    margin: 4rem ;
+    border: 1px double whitesmoke;
+    /* background-image: linear-gradient(to right, #FC466B,#3F5EFB); */
+    /* height: 0.3rem; */
+    
 
 }
 
@@ -109,7 +111,7 @@ h3 {
 
 }
 
-@media  screen and (max-width:1000px)  {
+@media  screen and (max-width:1500px)  {
     .js{
         height: 100%;
     }
@@ -130,10 +132,17 @@ h3 {
         font-size: 2.8rem;
     }
     .section-7 {
+        height: 90vh;
+        overflow: auto;
         width: 100%;
     }
     .section-8{
+        height: 90vh;
+        overflow: auto;
         width: 100%;
+    }
+    hr{
+        height: 0.15rem;
     }
     
 }
@@ -148,10 +157,11 @@ h3 {
         letter-spacing: .1rem;
     }
     p{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     code{
-        font-size: 0.5rem;
+        width: 95%;
+        font-size: 1rem;
     }
     img{
         height :15rem;
@@ -160,10 +170,20 @@ h3 {
         font-size: 1.7rem;
     }
     .section-7{
+        height: 85vh;
+        overflow: auto;
         width: 100%;
     }
     .section-8{
+        height: 85vh;
+        overflow: auto;
         width: 100%;
+    }
+    hr{
+        height: 0.15rem;
+    }
+    ul{
+        font-size: 1.5rem;
     }
     
 }
