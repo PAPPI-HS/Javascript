@@ -34,7 +34,7 @@ body {
     margin-bottom: 6rem;
 }
  
-.section-7{
+.sec{
     text-align: center;
     height:100%;
     margin: 0 auto;
@@ -44,7 +44,7 @@ body {
     width: 100%;
 }
 
-.section-8{
+/* .section-8{
     text-align: center;
     margin: 0 auto;
     height:100%;
@@ -53,12 +53,13 @@ body {
     border-radius: 0.6rem;
     width: 100%;
 
-}
+} */
 
 .main-h{
     color:#DA0037;
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
     letter-spacing: 0.3rem;
 }
 
@@ -71,13 +72,17 @@ p{
 code{
     text-align: left;
     margin: auto ;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 0.3rem;
     font-size: 2rem;
     display: block;
-    background-color: white;
+    background-color: black;
     color:#54E346;
     width: 65%;
-    border-radius: 0.5rem;
+    border-radius: 0 0.5rem 0.5rem 0 ;
+    border-left: 0.4rem solid #54E346 ;
+    padding-left: 2rem;
 }
 
 img{
@@ -108,9 +113,36 @@ hr {
 
 h3 {
     color:yellow;
-    font-size: 2.7rem;
+    text-decoration: underline;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 3rem;
     letter-spacing: 0.2rem;
 
+}
+
+strong{
+    color: pink;
+}
+
+pre{
+    text-align: left;
+    margin: auto ;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.3rem;
+    font-size: 2rem;
+    display: block;
+    background-color: black;
+    color:#54E346;
+    width: 65%;
+    border-radius: 0 0.5rem 0.5rem 0 ;
+    border-left: 0.4rem solid #54E346 ;
+    padding-left: 2rem;
+}
+
+.sub-h3{
+    color:cyan;
 }
 
 @media  screen and (max-width:1500px)  {
@@ -133,16 +165,16 @@ h3 {
     h3{
         font-size: 2.8rem;
     }
-    .section-7 {
+    .sec {
         height: 90vh;
         overflow: auto;
         width: 100%;
     }
-    .section-8{
+    /* .section-8{
         height: 90vh;
         overflow: auto;
         width: 100%;
-    }
+    } */
     hr{
         height: 0.15rem;
     }
@@ -185,16 +217,16 @@ h3 {
     h3{
         font-size: 1.7rem;
     }
-    .section-7{
+    .sec{
         height: 85vh;
         overflow: auto;
         width: 100%;
     }
-    .section-8{
+    /* .section-8{
         height: 85vh;
         overflow: auto;
         width: 100%;
-    }
+    } */
     hr{
         height: 0.15rem;
     }
