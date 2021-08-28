@@ -216,7 +216,7 @@
 
             </code>
             <hr>
-            <h3>Parsing an array returned from a function</h3>
+            <h3 class="sub-h3">Parsing an array returned from a function</h3>
             <pre>
 function f() {
     return [1, 2];
@@ -227,11 +227,53 @@ let a, b;
 console.log(a); // 1
 console.log(b); // 2 </pre>
             <hr>
-            <h3>Assigning the rest of an array to a variable </h3>
+            <h3 class="sub-h3">Assigning the rest of an array to a variable </h3>
             <pre>
 const [a, ...b] = [1, 2, 3];
 console.log(a); // 1
 console.log(b); // [2, 3]</pre>
+            <hr>   
+            <h3>Object Destructring</h3>
+            <p>we use { } for destructuring of objects. And we have to provide exact name of property </p>
+            <code>
+                const resturant = { name:'Calssico Italiano',location:'via angelo tavsnti 23', mainMenu:['pizza','pasta','Risotto']
+                }<br>
+                <br>
+                const {name , location , mainMenu} = resturant ;<br>
+                <br>
+                console.log(name,location,mainMenu);<br>
+                // EXPECTED output<br>
+                // 'Calssico Italiano'<br>
+                // 'via angelo tavsnti 23'<br>
+                // ['pizza','pasta','Risotto']<br>
+            </code>
+            <P>If you want to change variable name we have to manually assign it</P>
+            <code>
+                const {name:restaurantName, location:resturontLocation, mainMenu:resturontMenu} = resturont;<br>
+                console.log(restaurantName, resturontLocation, resturontMenu)<br>
+                <br>
+                // EXPECTED output<br>
+                // 'Calssico Italiano'<br>
+                // 'via angelo tavsnti 23'<br>
+                // ['pizza','pasta','Risotto']
+            </code>
+            <h3 class="sub-h3">Assigning default value</h3>
+            <p>In this case there is no owner property so it would give error if no default value is assigned<br>
+            default value is empty in this case but we can asign what ever we want</p>
+            <code>
+                const { name:restaurantName = [] , owner = [] } = resturont;
+            </code>
+            <p>We also asigned default value to restaurantName just in case</p>
+            <hr>
+            <h3 class="sub-h3">Nested object destructuring</h3>
+            <code>
+                const resturant = { name:'Calssico Italiano',location:'via angelo tavsnti 23', mainMenu :['pizza','pasta','Risotto'], Time{fri:{open:12, close:3}}};<br>
+                <br>
+                const{fri:{open,close}} = resturant;
+                
+            </code>
+            <img src="pic/20.png">
+
         </div>
     </div>
 </body>
