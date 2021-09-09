@@ -273,8 +273,209 @@ console.log(b); // [2, 3]</pre>
                 
             </code>
             <img src="pic/20.png">
+            <hr>
+            <h3>Spread Operator</h3>
+            <p>We can use spread operator to expand an array into all it's elements. It works on all <strong>ITERABLES</strong></p>
+            <p><em>Iterables : arrays, strings, maps, sets .NOT objects</em></p>
+            <p>But since es2018 spread operator can also be used on objects</p>
+            <code>
+                const arr = [7, 8, 9];<br>
+                <br>
+                const newArr = [1, 2, ...arr];<br>
+                console.log(newArr); // [1, 2, 7, 8, 9];<br>
+                <br>
+                console.log(...newArr); // 1 2 7 8 9<br>
+                <br>
+                const resturant = { name:'Calssico Italiano',location:'via angelo tavsnti 23', mainMenu:['pizza','pasta','Risotto'];<br>
+                <br>
+                const newMainMenu = [...resturant.mainMenu , 'karhai'];<br>
+                console.log(newMainMenu); // ['pizza','pasta','Risotto','karhai']<br>
+                <br>
+                const name = 'jonas';<br>
+                const letters = [...name]; // ['j', 'o', 'n', 'a', 's']
+            </code>
+            <hr>
+            <h3>Rest pattern and Parameters</h3>
+            <p>It is used on left hand side of assignement operator unline spread operatior which is used on right</p>
+            <p>It's basicaslly oppaosit of spread operator </p>
+            <em>It doesn't include any skipped element. And there can only ever be one rest in any destructuring assignement</em>
+            <code>
+                const [a, b, ...others] = [1, 2, 3, 4, 5];<br>
+                console.log(a, b, others) // 1 2 [3, 4, 5]<br>
+                <br>
+                const add = function(...numbers){<br>
+                    let sum = o ;<br>
+                    for (let i=0 ; i < numbers.length ; i++) sum += numbers[i]<br>
+                    console.log(sum)
+                }<br>
+                <br>
+                add(1,2) // 3 <br>
+                add(3,4,5,6) // 18<br>
+                <br>
+                const x =[2,10,5];<br>
+                add(...x); // 17
+            </code>
+            <hr>
+            <h3>Short Circuting (&& AND ||)</h3>
+            <p>In case of || if first value is a <strong>truthy</strong> value JS will return it without looking at second value</p>
+            <code>
+                console.log(3 || 'jonas'); // 3<br>
+                console.log(''||'jonas'); // jonas<br>        
+                console.log(true||0); // true<br>            
+                console.log(undefined||null) // null<br>  
+                <br>
+                console.log(0 || " " || false || 'jonas' || 0) // jonas    
+            </code>
+            <p>&& operator short circuits when first value is <strong>falsy</strong> and returns it without looking at second value </p>
+            <code>
+                console.log(0 && 'jonas') // 0<br>
+                console.log(7 && 'jonas') // jonas<br>
+                <br>
+                consol.log('hello' && 23 && null && jonas) // null
+            </code>
+            <hr>
+            <h3>The Nullish Coalesing Operator</h3>
+            <p>It works on the idea of nullinsh values instead if false values</p>
+            <p><strong>Nullish:</strong>null AND undefined (NOT 0 or " ")</p>
+            <code>
+                ----------- || ---------------<br>
+                <br>
+                resturont.guests = 0;<br>
+                const guestNum = resturant.guest || 10 ; <br>
+                <br>
+                console.log(guestNum) // 10<br>
+                <br>
+                ------------- Nullish -----------<br>
+                <br>
+                const guestNum2 = resturant.guests ?? 10 ;<br>
+                console.log(guestNum2); // 0
+
+            </code>
+            <hr>
+            <h3> Looping Arrays : The For-Of Loop</h3>
+            <p>We can use <strong>Continue</strong> and <strong>Break</strong> in for-of loop</p>
+            <code>
+                const words = ['car', 'water', 'mouse'] <br>
+                for (const i of words) console.log(i) ; // car  water  mouse <br>
+                <br>
+                for (const x of words.entries()){<br>
+                    console.log(words.entries())<br>
+                }<br>
+                // it will return a list for each word along with it's index location e.g. [1,water]<br>
+                <br>
+                // we can also save index location and word in words.enteries() in differant variables using de structuring<br>
+                <br>
+                for (let [a,b] of words.entries()){<br>
+                    console.log(`${a}: ${b}`)<br>
+                }<br>
+                // 1: water
+            </code>
+            <hr>
+            <h3>Enhanced Object Literals</h3>
+            <p>If there is an object A and you want to use it in object B you can just simply write the name of object A in B<br>
+            starting form es6 you can easily create functions/Methods inside an object by simply writing name of method and then circular bracket like shown below </p>
+            <code>
+                const my_object ={<br>
+                    add(a=0,b=0){<br>
+                        let sum = a+b;<br>
+                        return sum;<br>
+                    }
+                }
+            </code>
+            <p>We can also calculate property names by using expression in a square bracket</p>
+            <hr>
+            <h3>Optional Chaining</h3>
+            <p>It checks if value on the left does exist and if it doess't it returns undefined</p>
+            <code>
+                const users = [{name:'jonas' , email:'jonas@mama.io'}]<br>
+                <br>
+                console.log(users[0]?.name ?? 'Users array empty'); // jonas
+            </code>
+            <code>
+                const users = [{email:'jonas@mama.io'}]<br>
+                <br>
+                console.log(users[0]?.name ?? 'Users array empty'); // Users array empty 
+            </code>
+            <hr>
+            <h3>Looping objects_object Keys,Values,Entries</h3>
+            <code>
+                const openingHours = {<br>
+                    mon : {open : 1 , close: 6},<br>
+                    tue : {open: 12 , close: 10,},<br>
+                    fri : {open: 8 , close: 3}<br>
+                };<br>
+                <br>
+                const properties = object.keys(openingHours);<br>
+                const values = object.values(openingHours);<br>
+                <br>
+                console.log(properties) // ['mon', 'tue','fri']<br>
+                console.log(values) // 0:{open : 1 , close: 6} , 1:{open: 12 , close: 10,}, 2:{open: 8 , close: 3}<br>
+                <br>
+                let openStr = `We are open on ${properties.length()} days:`;<br>
+                for (const day of properties) {<br>
+                    openStr += '${day},'<br>
+                }; //   We are open on 3 days: mon , tue , fri  
+            </code>
+            <code>
+                const entries = Object.entries(openingHours);<br>
+                console.log(entries);
+            </code>
+            <img src="pic/21.png">
+            <code>
+                const entry = Object.entries(openingHours);<br>
+                <br>
+                for (const [x,{open,close}] of entry){console.log(`On ${x} We opne on ${open} and close on ${close}`);}
+            </code>
+            <img src="pic/22.png" style=" height: 10rem;">
+            <code>
+                const a = ['a', 'b', 'c'];<br>
+                <br>
+                for (const [index, element] of a.entries())<br>
+                console.log(index, element);<br>
+                <br>
+                // 0 'a'<br>
+                // 1 'b'<br>
+                // 2 'c'<br>
+           </code>
+           <code>
+            var a = ['a', 'b', 'c'];<br>
+            var iterator = a.entries();<br>
+            <br>
+            for (let e of iterator) {<br>
+              console.log(e);<br>
+            }<br>
+            // [0, 'a']<br>
+            // [1, 'b']<br>
+            // [2, 'c']<br>
+           </code>
+           <hr>
+           <h1 class="main-h">Sets</h1>
+           <p>It is known as tuple in Python . It is basically collection of unique values 
+           that means that a set can never have any duplicate</p>
+           <code>
+               <strong>forming a set</strong><br>
+               const my_set = new set(pass in any itterable e.g. string, list etc)<br>
+               <br>
+               const car = new set(['camaro','demon','silverado'])<br>
+               <br>
+               console.log(car.size) // 3<br>
+               console.log(car.has('tesla')) // false<br>
+               console.log(car.has('silverado')) // true <br>
+               car.add('focus-st') / It will add given item in the given set<br>
+               car.delete('focus-st') / It will delete given itm from given set<br>
+               car.clear() / It will delete whole set<br>
+               <br>
+               console.log(new set('jonas')) // {'j', 'o', 'n', 'a', 's'}<br>
+               <br>
+               const staff = ['chef', 'manager','waiter','chef','waiter'.'waiter']<br>
+               <br>
+               const staffUnique = [...new set(staff)] // ['chef','manager','waiter']
+
+           </code>
+
 
         </div>
     </div>
+    <script src="javasc.js" ></script>
 </body>
 </html>

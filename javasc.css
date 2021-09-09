@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to right bottom ,#1a2a6c,#b21f1f,#fdbb2d );
+    background-image: linear-gradient(to right bottom ,#159957,#155799 );
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -67,6 +67,9 @@ p{
     font-size: 2rem;
     color:ghostwhite;
 
+}
+em{
+    color:#1a2a6c;
 }
 
 code{
