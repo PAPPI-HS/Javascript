@@ -101,3 +101,42 @@
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
+
+// const my_map = new Map() ;
+
+// my_map.set(true,'kk').set(false,'no kk')
+
+// console.log(my_map)
+
+// const resturant = { name:'Calssico Italiano',location:'via angelo tavsnti 23', mainMenu :['pizza','pasta','Risotto'], Time:{fri:{open:12, close:3}}};
+
+// const{Time:{fri:{open,close}}} = resturant;
+// console.log(open,close)
+
+
+// const my_map = new Map([[1,"infetuation"]] );
+//  my_map.set(3,"crush").set(2,"love")
+//  console.log(my_map)
+
+const quiz = new Map([
+    ["question","what is best programming language in the world?"],
+    [1,'c'],
+    [2,'java'],
+    [3,'javaScript'],
+    ["correct",3],
+    [true,"correct"],
+    [false,"Try again!"],
+]);
+
+console.log(quiz.get("question"))
+for (const [key,value] of quiz){
+    if (typeof key === "number"){
+        console.log(`Answer ${key} : ${value}`)
+    }
+}    
+
+let ans = Number(prompt("your answer ?"))
+
+let a = ans === quiz.get("correct") ? quiz.get(true) : quiz.get(false);
+
+console.log(a);

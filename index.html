@@ -267,9 +267,9 @@ console.log(b); // [2, 3]</pre>
             <hr>
             <h3 class="sub-h3">Nested object destructuring</h3>
             <code>
-                const resturant = { name:'Calssico Italiano',location:'via angelo tavsnti 23', mainMenu :['pizza','pasta','Risotto'], Time{fri:{open:12, close:3}}};<br>
+                const resturant = { name:'Calssico Italiano',location:'via angelo tavsnti 23', mainMenu :['pizza','pasta','Risotto'], Time:{fri:{open:12, close:3}}};<br>
                 <br>
-                const{fri:{open,close}} = resturant;
+                const{Time:{fri:{open,close}}} = resturant;
                 
             </code>
             <img src="pic/20.png">
@@ -471,6 +471,40 @@ console.log(b); // [2, 3]</pre>
                <br>
                const staffUnique = [...new set(staff)] // ['chef','manager','waiter']
 
+           </code>
+           <hr>
+           <h1 class="main-h">Maps</h1>
+           <p>It's a data strucure that we use to map values to keys , Keys can have any type</p>
+           <code>
+               const myMap = new Map(); 
+           </code>
+           <code>
+               myMap.set(key,value); // adds new key value pair also returns the map<br>
+               myMap.set(key2,value2).set(key3,value3); // we can chain set method as it returns map<br>
+               myMap.get(key); // returns value . data type of key matters<br>
+               myMap.has(key); // returns true or false<br>
+               myMap.delete(key); // deletes the key <br>
+               myMap.size; // returns total number of items in a map<br>
+               myMap.clear(); // would delete my_map map
+               
+           </code>
+           <p>If array is used as key it should be first defined outside the map so it can be accesed easily
+               otherwise location of array in map and array called would not be same in memory heap
+           </p>
+           <code>
+            const quiz = new Map([<br>
+            ["question","what is best programming language in the world?"],<br>
+            [1,'c'],<br>
+            [2,'java'],<br>
+            [3,'javaScript'],<br>
+            ["correct",3],<br>
+            [true,"correct"],<br>
+            [false,"Try again!"],<br>
+            ]);
+           </code>
+           <p>Making maps from objects:</p>
+           <code>
+               const hoursMap = new Map(object.enteries(openingHours))
            </code>
 
 
