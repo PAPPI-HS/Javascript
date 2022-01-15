@@ -296,15 +296,15 @@ console.log(b); // [2, 3]</pre>
             </code>
             <hr>
             <h3>Rest pattern and Parameters</h3>
-            <p>It is used on left hand side of assignement operator unline spread operatior which is used on right</p>
+            <p>It is used on left hand side of assignement operator unlike spread operatior which is used on right</p>
             <p>It's basicaslly oppaosit of spread operator </p>
-            <em>It doesn't include any skipped element. And there can only ever be one rest in any destructuring assignement</em>
+            <p><em>It doesn't include any skipped element. And there can only ever be one rest in any destructuring assignement</em></p>
             <code>
                 const [a, b, ...others] = [1, 2, 3, 4, 5];<br>
                 console.log(a, b, others) // 1 2 [3, 4, 5]<br>
                 <br>
                 const add = function(...numbers){<br>
-                    let sum = o ;<br>
+                    let sum = 0 ;<br>
                     for (let i=0 ; i < numbers.length ; i++) sum += numbers[i]<br>
                     console.log(sum)
                 }<br>
@@ -335,6 +335,8 @@ console.log(b); // [2, 3]</pre>
             </code>
             <hr>
             <h3>The Nullish Coalesing Operator</h3>
+            <p>The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined,
+                 and otherwise returns its left-hand side operand.</p>
             <p>It works on the idea of nullinsh values instead if false values</p>
             <p><strong>Nullish:</strong>null AND undefined (NOT 0 or " ")</p>
             <code>
@@ -506,6 +508,11 @@ console.log(b); // [2, 3]</pre>
            <code>
                const hoursMap = new Map(object.enteries(openingHours))
            </code>
+           <p>If you want to convert map into an array use spread operator</p>
+           <hr>
+           <h1 class="main-h">Which data structure to use </h1>
+           <img src="pic/23.png">
+           <img src="pic/24.png">
 
 
         </div>
